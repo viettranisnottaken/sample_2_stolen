@@ -7,6 +7,17 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.login1{
+  border: 2px solid red;
+  width: 300px;
+  border-radius: 20px;
+  &:hover{
+    background: #000;
+    cursor: pointer;
+  }
+}
+ 
+
 body {
   padding-top: 60px;
 }
