@@ -7,6 +7,21 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.checkbox {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+
 .login1{
   border: 2px solid red;
   width: 300px;
