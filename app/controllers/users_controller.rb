@@ -15,6 +15,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    if logged_in?
+      if request.path == '/signup'
+      redirect_to root_url
+      end
+    end
     @user = User.new
   end
 
