@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:edit, :update, :index, :show]
+  before_action :correct_user, only: [:edit, :update]
 
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page], :per_page => 10) # or per_page: 10
   end
 
   # GET /users/1
@@ -20,6 +22,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
   end
 
   # POST /users
@@ -71,5 +74,22 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        store_location
+        respond_to do |format|
+          format.html {redirect_to login_url, notice: "GTFO lol", class: "text-danger"}
+        end
+      end
+    end
+
+    def correct_user
+      unless @user == current_user
+        respond_to do |format|
+          format.html {redirect_to users_url, notice: "Mind your own business boi"}
+        end
+      end
     end
 end

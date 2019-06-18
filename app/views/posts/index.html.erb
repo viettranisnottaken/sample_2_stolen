@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr style="font-weight: bold;">
+      <td>Title</td>
+      <td>Content</td>
+      <td colspan="3">Actions</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @posts.each do |p| %>
+    <tr>
+      <td><%= p.title %></td>
+      <td><%= p.content %></td>
+      <td><%= link_to 'Show', p %></td>
+      <td><%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Edit', edit_post_path(p) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate %>
