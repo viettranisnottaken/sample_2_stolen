@@ -1,0 +1,16 @@
+<% provide(:title, "New Post") %>
+
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <%= form_for(@post) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-control" %>
+
+      <%= f.label :content %>
+      <%= f.text_field :content, class: "form-control" %>
+
+      <%= f.submit "Alrighty!", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
