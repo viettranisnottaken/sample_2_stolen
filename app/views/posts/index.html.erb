@@ -10,7 +10,7 @@
     <% @posts.each do |p, user| %>
     <tr>
       <td><%= p.title %></td>
-      <td><%= p.content %></td>
+      <td><%= p[:content] %></td>
       <td><%= link_to 'Show', p %></td>
       <td><%= link_to 'Edit', edit_post_path(p) %></td>
       <% if current_user.admin? %>
