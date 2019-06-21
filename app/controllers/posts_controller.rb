@@ -46,9 +46,13 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    redirect_to posts_url, notice: "abc"
+    if current_user.admin?
+      @post = Post.find(params[:id])
+      @post.destroy
+      redirect_to posts_url, notice: "abc"
+    else
+      render "index", notice: "Don't get too handsy"
+    end
   end
 end
 
