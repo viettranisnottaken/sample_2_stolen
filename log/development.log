@@ -19865,3 +19865,2095 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2019-06-24 18:19:21 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mypv/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (203.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 300ms (Views: 294.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-24 18:19:26 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (617.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 645ms (Views: 641.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/help" for ::1 at 2019-06-24 18:19:27 +0700
+Processing by StaticPagesController#help as HTML
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2019-06-24 18:19:28 +0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-24 18:19:28 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=20" for ::1 at 2019-06-24 18:19:29 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"20"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 190]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=20" for ::1 at 2019-06-24 18:19:31 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"20"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 190]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=1" for ::1 at 2019-06-24 18:19:32 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=2" for ::1 at 2019-06-24 18:19:33 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=4" for ::1 at 2019-06-24 18:19:34 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"4"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 30]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts?page=7" for ::1 at 2019-06-24 18:19:34 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"7"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 60]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2019-06-24 18:19:35 +0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users?page=6" for ::1 at 2019-06-24 18:19:37 +0700
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 50]]
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 48.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-24 18:19:38 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-06-24 18:19:39 +0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered layouts/_header.html.erb (17.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2019-06-24 18:19:58 +0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GMoxgpCUy3w+X6loXVac2n4EQPJyrDF4cNf0Em78JP6Pvqg7sW57Jon2AUO8WoYtsV9UoPOGAGBNnUMyOXlXhA==", "post"=>{"title"=>"Scorpion", "content"=>"I'm from Mortal Kambat yall"}, "commit"=>"Alrighty!"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:40
+  [1m[36mPost Create (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Scorpion"], ["content", "I'm from Mortal Kambat yall"], ["created_at", "2019-06-24 11:19:58.871259"], ["updated_at", "2019-06-24 11:19:58.871259"]]
+  ↳ app/controllers/posts_controller.rb:40
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:40
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/posts" for ::1 at 2019-06-24 18:19:58 +0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts?page=2" for ::1 at 2019-06-24 18:20:00 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts?page=21" for ::1 at 2019-06-24 18:20:01 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"21"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 200]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered posts/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts?page=1" for ::1 at 2019-06-24 18:20:04 +0700
+Processing by PostsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:25
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 18:25:28 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-24 18:42:30 +0700
+  
+NoMethodError (undefined method `resouces' for #<ActionDispatch::Routing::Mapper:0x00007eff81a86948>
+Did you mean?  resources
+               resource):
+  
+config/routes.rb:7:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started DELETE "/logout" for ::1 at 2019-06-24 18:42:54 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4+UNkjn/PDvLQ4gYxaa8SOLZPMiyeKAgAvJetpqoVy9cDMsEm6sPYrwqQVqsJWgRGcN8t2PKGrB6rxlEusUTiw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 104], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 18:42:54 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 126ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 18:42:56 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 18:44:59 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 18:45:40 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 18:47:22 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 19:04:23 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 19:04:25 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"update", :controller=>"password_resets"}, missing required keys: [:id]):
+     6: 
+     7: <div class="row">
+     8:   <div class="col-xs-6 col-xs-offset-3">
+     9:     <%= form_for(:password_reset, url: password_reset_path) do |f| %>
+    10:       <%= f.label :email  %>
+    11:       <%= f.email_field :email %>
+    12: 
+  
+app/views/password_resets/new.html.erb:9:in `_app_views_password_resets_new_html_erb__2839139706885729613_69817920287840'
+Started GET "/password_resets/new" for ::1 at 2019-06-24 19:04:36 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 19:05:17 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 19:05:43 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (1.6ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 19:05:56 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddResetToUsers (20190624122027)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_digest" varchar[0m
+  ↳ db/migrate/20190624122027_add_reset_to_users.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_sent_at" datetime[0m
+  ↳ db/migrate/20190624122027_add_reset_to_users.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190624122027"]]
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/password_resets/new" for ::1 at 2019-06-24 20:06:37 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mypv/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:06:46 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Unsupported argument type: email (Symbol)):
+  
+app/controllers/password_resets_controller.rb:6:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:08:06 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: email (Symbol)):
+  
+app/controllers/password_resets_controller.rb:6:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:08:51 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: email (Symbol)):
+  
+app/controllers/password_resets_controller.rb:6:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:20:54 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (Unsupported argument type: email (Symbol)):
+  
+app/controllers/password_resets_controller.rb:6:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:24:43 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+TypeError (no implicit conversion of Symbol into Integer):
+  
+app/controllers/password_resets_controller.rb:13:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:24:57 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f6QrLrS023sSguZ+Tr/fPAB+dPGro+QktWK9paJtk5zATe24FuDoImXrLzwnPAtl+2Q0jnoRXrTNP/pXggDXOA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:25:24 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zfHH+DwD7J73I7tYQCS3cql0wc+ljbYvuyUuTY3Tx1pyGAFunlffx4BKchopp2MrUm6BsHQ/DL/DeGm/rb6D/g==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1000@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:27:14 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gNEmE3Ah/M5PquwDDHqPZu92pAu5FacpSEFFFD3ySBk/OOCF0nXPlzjDJUFl+Vs/FGzkdGinHbkwHALmHZ8MvQ==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:28:22 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bn1KTfB97NWwwZF5ediWgVhHI+ESbP1zRK+2BHI+8uW5lIzbUinfjMeoWDsQW0LYo11jnsPeR+M88vH2UlO2QQ==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1000@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 20:29:35 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-06-24 20:29:41 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Xjs0WK4fnnPtUYj8HmmXkXgPG2NzZ0VTSJImdogMdker3b0dcg3m+lvBaUeFbTX/8GInfKiVtEUw06pvUZs2Q==", "session"=>{"email"=>"viet1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:29:48 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2019-06-24 20:29:49 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2019-06-24 20:29:59 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m8DxDCr+z90UEBRYOqwQWD+wtw4GeZdPx5knI4br03vS5VU9aUEjRcY9t4vfUvMh0TQjirgTTc3HdOcDYSCO5g==", "user"=>{"name"=>"viet1", "email"=>"viet1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "viet1"], ["email", "viet1@gmail.com"], ["created_at", "2019-06-24 13:29:59.676824"], ["updated_at", "2019-06-24 13:29:59.676824"], ["password_digest", "$2a$12$WoMKPUOzYYHzgGE.b7nDfedmw04ovBCHjzbU90dfsO0YGgNcHV4nW"], ["activation_digest", "$2a$12$WPZIRi4L2LtwoYnMI8iQiuGeCT3vuaRFHlsypdJGnh1WIu.kbMqge"]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.3ms)
+UserMailer#account_activation: processed outbound mail in 579.7ms
+Sent mail to viet1@gmail.com (181.3ms)
+Date: Mon, 24 Jun 2019 20:30:00 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d0589457a_367e2aefe17272b0151f3@framgia.mail>
+Subject: Account Activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d058937aa_367e2aefe17272b0150cf";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d058937aa_367e2aefe17272b0150cf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#account_activation
+
+, find me in app/views/user_mailer/account_activation.text.erb
+
+
+----==_mimepart_5d10d058937aa_367e2aefe17272b0150cf
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+<p>Welcome to the family!</p>
+<p>Click the link below to activate your account</p>
+<p><a href="http://localhost:3000/account_activations/Hr83w_LazfkIPjBtVd5NGQ/edit?email=viet1%40gmail.com">Activate</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d058937aa_367e2aefe17272b0150cf--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1361ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:30:00 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/Hr83w_LazfkIPjBtVd5NGQ/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 20:30:07 +0700
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"Hr83w_LazfkIPjBtVd5NGQ"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_activations_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "activated" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["activated", 1], ["updated_at", "2019-06-24 13:30:07.758644"], ["id", 105]]
+  ↳ app/models/user.rb:46
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:46
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:47
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 13:30:07.767338"], ["activated_at", "2019-06-24 13:30:07.766915"], ["id", 105]]
+  ↳ app/models/user.rb:47
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:47
+Redirected to http://localhost:3000/users/105
+Completed 302 Found in 255ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/users/105" for ::1 at 2019-06-24 20:30:07 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 20:30:25 +0700
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:30:25 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-24 20:30:30 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SWi+PbxJGE+DtQwopCcCsbA/ZXhSf/rcyvhgEkTAHHr2gXirHh0rFvTcxWrNpNboSyUlB4PNQEyypSfgZK1Y3g=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:30:30 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 91ms (Views: 87.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 20:30:37 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 20:30:38 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:30:40 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8LkZpOkRdp8XWQTKBHOLglTPDqKHa5Gpe4kFA5pM+mnpaVMqt0TUyMhT7h/0hH+W0hnvqOtNlaQxj6pnKyf9A==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$9NpSLhD43B6lK1mOhG/5L.Sev.OYPnOAi/YAedsubLrRYE/AulQvW"], ["updated_at", "2019-06-24 13:30:40.812225"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 13:30:40.819690"], ["reset_sent_at", "2019-06-24 13:30:40.819139"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.2ms)
+UserMailer#password_reset: processed outbound mail in 6.4ms
+Sent mail to viet1@gmail.com (52.5ms)
+Date: Mon, 24 Jun 2019 20:30:40 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d080cbc07_367e2aefe172706c153e2@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d080cb719_367e2aefe172706c15292";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d080cb719_367e2aefe172706c15292
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d10d080cb719_367e2aefe172706c15292
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/account_activations/hJsjXuoF-hcnoi4FuQuHXQ/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d080cb719_367e2aefe172706c15292--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 321ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:30:40 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/hJsjXuoF-hcnoi4FuQuHXQ/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 20:30:46 +0700
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"hJsjXuoF-hcnoi4FuQuHXQ"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_activations_controller.rb:3
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:30:46 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:31:45 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 20:31:46 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 20:31:47 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:31:48 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQcbulStSrUzjSyJ7wGAlX0eHRC8l26oIiriWGtL/PYxYFqQbdQcPGzxByK4wl9FLwVGlJUn9rgXAvjl+Y5Q6w==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$Ib9eR0TZmY.G1CTLUBNFaO4EB2FJvq8sYlJMnzbuosjxWcmCR3fXS"], ["updated_at", "2019-06-24 13:31:49.250022"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 13:31:49.258013"], ["reset_sent_at", "2019-06-24 13:31:49.257539"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (32.1ms)
+UserMailer#password_reset: processed outbound mail in 35.4ms
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 12.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_password_resets_url' for #<#<Class:0x00007eff80868400>:0x00007eff806055a0>
+Did you mean?  edit_password_reset_url
+               new_password_reset_url):
+    6: 
+    7: <p>Click the link below to reset your password</p>
+    8: <p>The link will expire in 2 hours</p>
+    9: <p><%= link_to "Reset my password", edit_password_resets_url(@user.reset_token, email: @user.email) %></p>
+  
+app/views/user_mailer/password_reset.html.erb:9:in `_app_views_user_mailer_password_reset_html_erb___2183076901732173807_69817917780460'
+app/mailers/user_mailer.rb:20:in `password_reset'
+app/models/user.rb:62:in `send_password_reset_email'
+app/controllers/password_resets_controller.rb:9:in `create'
+Started POST "/password_resets" for ::1 at 2019-06-24 20:32:12 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fN1PVDTOlZ1sO7qZtnEIwPbsCM40LOjDH21jGGA8jErDNInClpqmxBtSc9vf8tyZDfZIseWeUlNnMCTqQFHI7g==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$l5MLJ5u50S8CUQ5/Po.O3uFiU.aeCOSEICrgKAVhjLS/Z3S8LAHBu"], ["updated_at", "2019-06-24 13:32:13.062800"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 13:32:13.070318"], ["reset_sent_at", "2019-06-24 13:32:13.069285"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.2ms)
+UserMailer#password_reset: processed outbound mail in 5.9ms
+Sent mail to viet1@gmail.com (63.8ms)
+Date: Mon, 24 Jun 2019 20:32:13 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d0dd14f04_367e2aefe1727148155bc@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d0dd149ce_367e2aefe1727148154a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d0dd149ce_367e2aefe1727148154a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d10d0dd149ce_367e2aefe1727148154a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/IiUU6s0nChYi-GxkEp6Dyw/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d0dd149ce_367e2aefe1727148154a--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 339ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:32:13 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/IiUU6s0nChYi-GxkEp6Dyw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 20:32:20 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"IiUU6s0nChYi-GxkEp6Dyw"}
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 20:46:02 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 20:46:03 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 20:46:06 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyDCdywtjM4QtmUu+rKPIb27I/8+m6WOEK/OUq+3QI7jR4NdFVTaR0/KToWtcVDx76B4excrPZ4lh9TvPXLskw==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$Y2hslsojdTKgTS1b/mNJt.aPoPJpkrdzhCNbYeFI3ieqwMB8Cl3A6"], ["updated_at", "2019-06-24 13:46:06.955067"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 13:46:06.962611"], ["reset_sent_at", "2019-06-24 13:46:06.961918"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.6ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.2ms)
+UserMailer#password_reset: processed outbound mail in 8.7ms
+Sent mail to viet1@gmail.com (52.0ms)
+Date: Mon, 24 Jun 2019 20:46:06 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d41ef120a_367e2aefe172738c15736@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d41ef06c0_367e2aefe172738c15662";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d41ef06c0_367e2aefe172738c15662
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d10d41ef06c0_367e2aefe172738c15662
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/VyH764Jb_obeiDn0hezMXw/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d41ef06c0_367e2aefe172738c15662--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 337ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 20:46:07 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/VyH764Jb_obeiDn0hezMXw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 20:46:12 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"VyH764Jb_obeiDn0hezMXw"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:19:in `edit'
+Started GET "/password_resets/VyH764Jb_obeiDn0hezMXw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 20:46:54 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"VyH764Jb_obeiDn0hezMXw"}
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered password_resets/edit.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 21:02:44 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 21:02:45 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 21:02:47 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NQdCl1mHiNHCgF5N2wAWLByGmGgNuWJNyuz9ceqmyG0VYAO9YP7eWJ38deaMw8n8Tp3D7CQJ+l3/xOfMeGNkcA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$QVWVgQri35D/wdL.h2YhAuOdKX8UDffkKGNiCuXB2pUwmf4NRKP/C"], ["updated_at", "2019-06-24 14:02:47.861072"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 14:02:47.868509"], ["reset_sent_at", "2019-06-24 14:02:47.867677"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.2ms)
+UserMailer#password_reset: processed outbound mail in 6.1ms
+Sent mail to viet1@gmail.com (54.4ms)
+Date: Mon, 24 Jun 2019 21:02:47 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d807d9ca7_367e2aefe172706c1597b@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d807d9632_367e2aefe172706c15874";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d807d9632_367e2aefe172706c15874
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d10d807d9632_367e2aefe172706c15874
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/PtyYIWyaE4DLkJGpdGP0DA/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d807d9632_367e2aefe172706c15874--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 340ms (ActiveRecord: 13.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 21:02:47 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/PtyYIWyaE4DLkJGpdGP0DA/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 21:02:52 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"PtyYIWyaE4DLkJGpdGP0DA"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 21:02:52 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-24 21:03:54 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-24 21:03:56 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-24 21:03:58 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"86qcoZ8ZwyLdzJOBYYqx3DKe4Reu+gtN75P3TMpmq23Tzd2LpmCVq4KwuCo2SW4MYIW6k4dKk13au+3xWKMHcA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$Ya1xWCNyDnvHGMCo/0wdv.JVFaBTj4MKrEaKbLG6jPQf/lAXMBUtq"], ["updated_at", "2019-06-24 14:03:58.577942"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-24 14:03:58.588568"], ["reset_sent_at", "2019-06-24 14:03:58.588011"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.7ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.7ms)
+UserMailer#password_reset: processed outbound mail in 10.6ms
+Sent mail to viet1@gmail.com (56.5ms)
+Date: Mon, 24 Jun 2019 21:03:58 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d10d84e96fc0_367e2aefe172714816151@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d10d84e96817_367e2aefe1727148160a6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d10d84e96817_367e2aefe1727148160a6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d10d84e96817_367e2aefe1727148160a6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/OtEC7z1vZi28y0KEMw3Nmg/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d10d84e96817_367e2aefe1727148160a6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 372ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-24 21:03:58 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/OtEC7z1vZi28y0KEMw3Nmg/edit?email=viet1%40gmail.com" for ::1 at 2019-06-24 21:04:03 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"OtEC7z1vZi28y0KEMw3Nmg"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:19:in `edit'
+Started GET "/signup" for ::1 at 2019-06-27 18:34:09 +0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mypv/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.0ms)
+  Rendered users/new.html.erb within layouts/application (74.3ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 406ms (Views: 391.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2019-06-27 18:34:29 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRYxeZPyaqcv0kVBjfGWnkwnf+N3Xl23+JjJZdENn/vq//fvMaZZ/li7jAPkckLHtz0/nKbs5yeAxY6X8WDbXw==", "user"=>{"name"=>"viet7", "email"=>"viet7@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "viet7@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 255ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for ::1 at 2019-06-27 18:34:41 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WA3aQ7fbBqzZcGUixikWK5Fn8lMtV15IzqEsTrLyT23n5BzVFY819a4ZrGCvqsJyan2yLPzl5Ni2/Gu8kp8LyQ==", "user"=>{"name"=>"viet7", "email"=>"viet20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "viet20@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "viet7"], ["email", "viet20@gmail.com"], ["created_at", "2019-06-27 11:34:41.263013"], ["updated_at", "2019-06-27 11:34:41.263013"], ["password_digest", "$2a$12$fssfIZBtQ/YLhm3ATFGwTO.0ktlTYVObfOfl3JAnPCl9m4rOftFrS"], ["activation_digest", "$2a$12$NxGdi0fQksin7A367l8QLOyDRPF91RncUOdNCzsvJaS0HG84bp8Am"]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (0.4ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.1ms)
+UserMailer#account_activation: processed outbound mail in 27.4ms
+Sent mail to viet20@gmail.com (214.1ms)
+Date: Thu, 27 Jun 2019 18:34:41 +0700
+From: noreply@example.com
+To: viet20@gmail.com
+Message-ID: <5d14a9d1960ae_1d662b1a5f64b17c189a0@framgia.mail>
+Subject: Account Activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d14a9d19471f_1d662b1a5f64b17c188f6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d14a9d19471f_1d662b1a5f64b17c188f6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#account_activation
+
+, find me in app/views/user_mailer/account_activation.text.erb
+
+
+----==_mimepart_5d14a9d19471f_1d662b1a5f64b17c188f6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet7
+</p>
+<p>Welcome to the family!</p>
+<p>Click the link below to activate your account</p>
+<p><a href="http://localhost:3000/account_activations/mywQHEGwdkKk_K59l5bm4w/edit?email=viet20%40gmail.com">Activate</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d14a9d19471f_1d662b1a5f64b17c188f6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 796ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 18:34:41 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 18:34:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/account_activations/mywQHEGwdkKk_K59l5bm4w/edit?email=viet20%40gmail.com" for ::1 at 2019-06-27 18:35:28 +0700
+Processing by AccountActivationsController#edit as HTML
+  Parameters: {"email"=>"viet20@gmail.com", "id"=>"mywQHEGwdkKk_K59l5bm4w"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet20@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/account_activations_controller.rb:3
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:46
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "activated" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["activated", 1], ["updated_at", "2019-06-27 11:35:29.222380"], ["id", 106]]
+  ↳ app/models/user.rb:46
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:46
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:47
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "activated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-27 11:35:29.230806"], ["activated_at", "2019-06-27 11:35:29.230284"], ["id", 106]]
+  ↳ app/models/user.rb:47
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:47
+Redirected to http://localhost:3000/users/106
+Completed 302 Found in 248ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/users/106" for ::1 at 2019-06-27 18:35:29 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-27 18:40:40 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ag6wPefR80x5P3aI3VHACz42VC0t/AOhCwN+NTiVVH7V53arRYXAFQ5Wv8q00hRSxSwUUvxOuTFzXjnHGPgQ2g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 18:40:40 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-27 18:40:40 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 65ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for ::1 at 2019-06-27 18:40:43 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (1.2ms)
+  Rendered users/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-06-27 18:40:59 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5iTH099zylPxUTYDoSPEfiIG1zpV6PD7bYNCeEuZPyCvAWPinMwmyyN8ldBE3ScHzIJDvuuCKnltboJYrFJivQ==", "user"=>{"name"=>"viet21", "email"=>"viet21@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "viet21@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest", "activation_digest") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "viet21"], ["email", "viet21@gmail.com"], ["created_at", "2019-06-27 11:40:59.605479"], ["updated_at", "2019-06-27 11:40:59.605479"], ["password_digest", "$2a$12$i6Mxu7Y/ZsnH5lyP0qaz.ec5t3Jt1EKQ4bO5LYEkj7PgVmm29w7hq"], ["activation_digest", "$2a$12$4TGl2FwwutQ9bNBFEQMyee2UITogO89KG7lKCnNGk.a0RxnJ3hi4S"]]
+  ↳ app/controllers/users_controller.rb:43
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:43
+  Rendering user_mailer/account_activation.html.erb within layouts/mailer
+  Rendered user_mailer/account_activation.html.erb within layouts/mailer (1.7ms)
+  Rendering user_mailer/account_activation.text.erb within layouts/mailer
+  Rendered user_mailer/account_activation.text.erb within layouts/mailer (0.2ms)
+UserMailer#account_activation: processed outbound mail in 10.0ms
+Sent mail to viet21@gmail.com (46.7ms)
+Date: Thu, 27 Jun 2019 18:40:59 +0700
+From: noreply@example.com
+To: viet21@gmail.com
+Message-ID: <5d14ab4bcf6ca_1d662b1a5f64b014191a2@framgia.mail>
+Subject: Account Activation
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d14ab4bcedbc_1d662b1a5f64b01419016";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d14ab4bcedbc_1d662b1a5f64b01419016
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#account_activation
+
+, find me in app/views/user_mailer/account_activation.text.erb
+
+
+----==_mimepart_5d14ab4bcedbc_1d662b1a5f64b01419016
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet21
+</p>
+<p>Welcome to the family!</p>
+<p>Click the link below to activate your account</p>
+<!-- <p><a href="http://localhost:3000/account_activations/9sHlyw8xcnudv35WvZUEYg/edit?email=viet21%40gmail.com">Activate</a></p> -->
+<p><a href="http://localhost:3000/account_activations/9sHlyw8xcnudv35WvZUEYg/edit?email=viet21%40gmail.com">Activate</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d14ab4bcedbc_1d662b1a5f64b01419016--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 517ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 18:40:59 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-27 19:47:31 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2019-06-27 19:47:40 +0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9yZsHqwByE/3Q4+BovGjH3EMMZMsmWpe87Wi8Tzu7W4c8fY7u3GBrdGZzAdMnbGWyy2FY1P2oZqqVKTBW4iwbg==", "session"=>{"email"=>"viet1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:27
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", "$2a$12$lo02h2MR2vS8VADmCyyiMeMR9tH0GT/3rSXnJ2GHl5wATsW2slWm."], ["updated_at", "2019-06-27 12:47:41.075082"], ["id", 105]]
+  ↳ app/models/user.rb:27
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:27
+Redirected to http://localhost:3000/users
+Completed 302 Found in 500ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/users" for ::1 at 2019-06-27 19:47:41 +0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/105" for ::1 at 2019-06-27 19:47:48 +0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/105/edit" for ::1 at 2019-06-27 19:47:50 +0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:79
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.1ms)
+  Rendered users/edit.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 57.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2019-06-27 19:47:55 +0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ app/views/users/index.html.erb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/logout" for ::1 at 2019-06-27 19:47:57 +0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5kvuwGVskYiowWPludwEtJjm+5BB2sewCj/PqQdnsIZZoihWxzii0d+oqqfQX9DtY/y775BofSByYohbJwr0Ig=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:42
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_digest", nil], ["updated_at", "2019-06-27 12:47:57.341854"], ["id", 105]]
+  ↳ app/models/user.rb:42
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:42
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 19:47:57 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-27 19:47:58 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-27 19:47:59 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-27 19:48:05 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QAx1BnbehEqFjimSW6T9IejUBno6OvQrPXlQZpJyJBlgazQsT6fSw9ryAjkMZyLxus9d/hOKbDsIUUrbALeIBA==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$rxShzbiqShGSnNvJghTmZOswtMxP6YykF9Vr3Uj8yADwHtsQFjlqe"], ["updated_at", "2019-06-27 12:48:05.528972"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-27 12:48:05.534829"], ["reset_sent_at", "2019-06-27 12:48:05.534332"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.3ms)
+UserMailer#password_reset: processed outbound mail in 11.3ms
+Sent mail to viet1@gmail.com (48.9ms)
+Date: Thu, 27 Jun 2019 19:48:05 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d14bb0589e34_1d662b1a5f64b014193cd@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d14bb05898fd_1d662b1a5f64b014192b6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d14bb05898fd_1d662b1a5f64b014192b6
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d14bb05898fd_1d662b1a5f64b014192b6
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/bA0R0xCoNnBq2_d3BnGTtw/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d14bb05898fd_1d662b1a5f64b014192b6--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 330ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 19:48:05 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/bA0R0xCoNnBq2_d3BnGTtw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-27 19:48:10 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"bA0R0xCoNnBq2_d3BnGTtw"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/password_resets_controller.rb:19:in `edit'
+Started GET "/password_resets/bA0R0xCoNnBq2_d3BnGTtw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-27 19:49:46 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"bA0R0xCoNnBq2_d3BnGTtw"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:19
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered password_resets/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 263ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/password_resets/bA0R0xCoNnBq2_d3BnGTtw" for ::1 at 2019-06-27 19:49:57 +0700
+Processing by PasswordResetsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HEOg1HEmX92pZiVlYP+900dHcgScCt3souuS18BlBpqjqmZC03JshN4P7CcJfGmKvF0ye024Z3zattUl4AhCPg==", "email"=>"viet1@gmail.com", "user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update password", "id"=>"bA0R0xCoNnBq2_d3BnGTtw"}
+No template found for PasswordResetsController#update, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 19:50:44 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-06-27 19:50:45 +0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/new" for ::1 at 2019-06-27 19:50:47 +0700
+Processing by PasswordResetsController#new as HTML
+  Rendering password_resets/new.html.erb within layouts/application
+  Rendered password_resets/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/password_resets" for ::1 at 2019-06-27 19:50:50 +0700
+Processing by PasswordResetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"umIQnxqAJvmwUpji/M/Ox6eqRpLfXKQ7JM7zP6O2gf+aBVG1I/lwcO8us0mrDBEX9bEdFvbsPCsR5umCMXMt4g==", "password_reset"=>"[FILTERED]", "commit"=>"TAKE ME!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "reset_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_digest", "$2a$12$H7GofdUFKvH9cWwUekjHNevCK1oGXUtyoXGGeparoBgJCGRw9qr6W"], ["updated_at", "2019-06-27 12:50:50.324053"], ["id", 105]]
+  ↳ app/models/user.rb:57
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:57
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:58
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-06-27 12:50:50.331929"], ["reset_sent_at", "2019-06-27 12:50:50.331469"], ["id", 105]]
+  ↳ app/models/user.rb:58
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:58
+  Rendering user_mailer/password_reset.html.erb within layouts/mailer
+  Rendered user_mailer/password_reset.html.erb within layouts/mailer (0.5ms)
+  Rendering user_mailer/password_reset.text.erb within layouts/mailer
+  Rendered user_mailer/password_reset.text.erb within layouts/mailer (0.2ms)
+UserMailer#password_reset: processed outbound mail in 9.0ms
+Sent mail to viet1@gmail.com (57.7ms)
+Date: Thu, 27 Jun 2019 19:50:50 +0700
+From: noreply@example.com
+To: viet1@gmail.com
+Message-ID: <5d14bbaa573da_1d662b1a5f64b17c1952@framgia.mail>
+Subject: Password Reset
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5d14bbaa568bc_1d662b1a5f64b17c194e1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5d14bbaa568bc_1d662b1a5f64b17c194e1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+User#password_reset
+
+, find me in app/views/user_mailer/password_reset.text.erb
+
+
+----==_mimepart_5d14bbaa568bc_1d662b1a5f64b17c194e1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>User#account_activation</h1>
+
+<p>
+  Hi, viet1
+</p>
+
+<p>Click the link below to reset your password</p>
+<p>The link will expire in 2 hours</p>
+<p><a href="http://localhost:3000/password_resets/tFKjMjAXI4QZ-yUKa5R1sQ/edit?email=viet1%40gmail.com">Reset my password</a></p>
+
+  </body>
+</html>
+
+----==_mimepart_5d14bbaa568bc_1d662b1a5f64b17c194e1--
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 350ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 19:50:50 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (15.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/bA0R0xCoNnBq2_d3BnGTtw/edit?email=viet1%40gmail.com" for ::1 at 2019-06-27 19:59:22 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"bA0R0xCoNnBq2_d3BnGTtw"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:19
+Redirected to http://localhost:3000/
+Completed 302 Found in 241ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-06-27 19:59:22 +0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/password_resets/tFKjMjAXI4QZ-yUKa5R1sQ/edit?email=viet1%40gmail.com" for ::1 at 2019-06-27 19:59:27 +0700
+Processing by PasswordResetsController#edit as HTML
+  Parameters: {"email"=>"viet1@gmail.com", "id"=>"tFKjMjAXI4QZ-yUKa5R1sQ"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "viet1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/password_resets_controller.rb:19
+  Rendering password_resets/edit.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered password_resets/edit.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 280ms (Views: 43.6ms | ActiveRecord: 0.2ms)
+
+

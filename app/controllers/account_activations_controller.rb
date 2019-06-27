@@ -6,7 +6,6 @@ class AccountActivationsController < ApplicationController
       log_in @user
       flash[:success] = "Account activated!"
       redirect_to @user
-      # Here, @user and user give the same result, but whats the difference?
     else
       flash[:danger] = "Invalid activation link"
       redirect_to root_url
