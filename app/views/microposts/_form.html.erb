@@ -1,0 +1,7 @@
+<h2>POST</h2>
+<%= form_for(current_user.microposts.build) do |f| %>
+  <%= f.label :content, "Write something"  %>
+  <%= f.text_area :content, class: "col-md-12", style: "margin_bottom: 12px; height: 200px; width: 300px" %> <br>
+
+  <%= f.submit "POST!!!!", class: "btn btn-primary" %>
+<% end %>
