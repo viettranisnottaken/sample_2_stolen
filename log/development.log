@@ -27981,3 +27981,928 @@ Processing by MicropostsController#index as HTML
 Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/microposts" for ::1 at 2019-07-02 17:34:00 +0700
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mypv/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (84.3ms)
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.3ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (958.1ms)
+  Rendered microposts/index.html.erb within layouts/application (1044.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1270ms (Views: 1245.0ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/microposts" for ::1 at 2019-07-02 17:34:04 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y+oTNGqy1ncPM81qIzTqn946x150RugHu88cytNKJld0A9WiyOblLnhaBChKtz7GJSCHIaX0UpfDkls48ydi8w==", "micropost"=>{"content"=>"mbhx"}, "commit"=>"POST!!!!"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[36mMicropost Create (0.5ms)[0m  [1m[32mINSERT INTO "microposts" ("user_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 105], ["content", "mbhx"], ["created_at", "2019-07-02 10:34:04.811601"], ["updated_at", "2019-07-02 10:34:04.811601"]]
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 14ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:34:04 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (2.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.6ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (72.8ms)
+  Rendered microposts/index.html.erb within layouts/application (76.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 110ms (Views: 105.9ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/microposts/213" for ::1 at 2019-07-02 17:34:08 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ETEIeho08pAbrmET/vZ5rC55a2Ne5+1AllbUKrgrDhKu2M7suGDByWzHqFGXda311WMrHI9VV9DuC5PYmEZKtg==", "id"=>"213"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[36mMicropost Destroy (0.6ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 213]]
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+No template found for MicropostsController#destroy, rendering head :no_content
+Completed 204 No Content in 37ms (ActiveRecord: 7.8ms)
+
+
+Started DELETE "/microposts/212" for ::1 at 2019-07-02 17:34:11 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ETEIeho08pAbrmET/vZ5rC55a2Ne5+1AllbUKrgrDhKu2M7suGDByWzHqFGXda311WMrHI9VV9DuC5PYmEZKtg==", "id"=>"212"}
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 212], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[36mMicropost Destroy (0.3ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 212]]
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+No template found for MicropostsController#destroy, rendering head :no_content
+Completed 204 No Content in 26ms (ActiveRecord: 8.2ms)
+
+
+Started DELETE "/microposts/213" for ::1 at 2019-07-02 17:34:34 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ETEIeho08pAbrmET/vZ5rC55a2Ne5+1AllbUKrgrDhKu2M7suGDByWzHqFGXda311WMrHI9VV9DuC5PYmEZKtg==", "id"=>"213"}
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 213], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Micropost with 'id'=213):
+  
+app/controllers/microposts_controller.rb:18:in `destroy'
+Started DELETE "/microposts/211" for ::1 at 2019-07-02 17:35:02 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ETEIeho08pAbrmET/vZ5rC55a2Ne5+1AllbUKrgrDhKu2M7suGDByWzHqFGXda311WMrHI9VV9DuC5PYmEZKtg==", "id"=>"211"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/microposts_controller.rb:18:in `destroy'
+Started GET "/microposts" for ::1 at 2019-07-02 17:35:28 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (16.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (27.6ms)
+  Rendered microposts/index.html.erb within layouts/application (46.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 103ms (Views: 93.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/microposts/211" for ::1 at 2019-07-02 17:35:31 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JWaK1nQzOAzYLbpNdqQgnuEf+Q8SQo84sE3YbIU18Lqaj0xA1mcLVa9Ecw8fJ/THGgW5cMPwNajIEJ+epVi0Hg==", "id"=>"211"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/microposts_controller.rb:18:in `destroy'
+Started GET "/microposts" for ::1 at 2019-07-02 17:35:34 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (4.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.3ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (25.9ms)
+  Rendered microposts/index.html.erb within layouts/application (33.6ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 62ms (Views: 57.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:35:35 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (6.9ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.0ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (23.4ms)
+  Rendered microposts/index.html.erb within layouts/application (33.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/microposts/210" for ::1 at 2019-07-02 17:35:38 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VQCucxCQsf77R0X3BWovx3VO41RMb2sI8dDSlXlFkd3q6WjlssSCp4wujLVs6fuejlSjK53d0ZiJjZVnWSjVeQ==", "id"=>"210"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/microposts_controller.rb:18:in `destroy'
+Started GET "/microposts" for ::1 at 2019-07-02 17:35:40 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (4.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.7ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (26.8ms)
+  Rendered microposts/index.html.erb within layouts/application (34.7ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 63.6ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/microposts" for ::1 at 2019-07-02 17:35:44 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OSplz8GS3Zp3Ct3P1efHVSs+NNxKMMvd5ccmyBnpoxaGw6NZY8buwwBjFI28ZBMM0CR0o5uCcU2dmmE6OYTnsg==", "micropost"=>{"content"=>"fasddfsdad"}, "commit"=>"POST!!!!"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[36mMicropost Create (0.6ms)[0m  [1m[32mINSERT INTO "microposts" ("user_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 105], ["content", "fasddfsdad"], ["created_at", "2019-07-02 10:35:44.328682"], ["updated_at", "2019-07-02 10:35:44.328682"]]
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 22ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:35:44 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (34.3ms)
+  Rendered microposts/index.html.erb within layouts/application (37.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:03 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (14.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (15.5ms)
+  Rendered microposts/index.html.erb within layouts/application (30.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 55.6ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/microposts/214" for ::1 at 2019-07-02 17:36:05 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"C/zmt3oAkRDuJZ8dSE3LISepdhxS00fMU4DLbVUdpTS0FSAh2FSiSZlMVl8hzh943LM2Y4Nh/Vwr3YyfdXDhkA==", "id"=>"214"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/microposts_controller.rb:18:in `destroy'
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:08 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (16.0ms)
+  Rendered microposts/index.html.erb within layouts/application (18.2ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:17 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (15.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (15.5ms)
+  Rendered microposts/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 56.0ms | ActiveRecord: 2.4ms)
+
+
+Started DELETE "/microposts/214" for ::1 at 2019-07-02 17:36:20 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sLUzIpyAeOdnxSnSGjKk4u6s9UEffD5jV5qNi9NjuMcPXPW0PtRLvhCs4JBzsXC7Fba1Ps7OhPMvx8p58w78Yw==", "id"=>"214"}
+  [1m[36mMicropost Load (0.4ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 214], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[36mMicropost Destroy (0.5ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 214]]
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+No template found for MicropostsController#destroy, rendering head :no_content
+Completed 204 No Content in 31ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:24 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (6.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (1.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (21.8ms)
+  Rendered microposts/index.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:45 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (14.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (16.5ms)
+  Rendered microposts/index.html.erb within layouts/application (32.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/microposts/211" for ::1 at 2019-07-02 17:36:48 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kr+nITJUREjHPg0VVP2aGr69n2Xs/C6B/QC9JhXNUVAtVmG3kAB3EbBXxFc9fk5DRaffGj1OlBGFXfrUNaAV9A==", "id"=>"211"}
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 211], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[36mMicropost Destroy (1.0ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 211]]
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 16ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:48 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (2.6ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (48.1ms)
+  Rendered microposts/index.html.erb within layouts/application (52.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/microposts" for ::1 at 2019-07-02 17:36:51 +0700
+Processing by MicropostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4/T+S2THdNrIAX9Z3TveN0Ov68vnSUXJFAxXm1jJxeoZhVvj8cuihxJzL8O9zshJhT/0P4vn4dcDXasTQ5jsw==", "micropost"=>{"content"=>"xczxvsdv S"}, "commit"=>"POST!!!!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[36mMicropost Create (0.7ms)[0m  [1m[32mINSERT INTO "microposts" ("user_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 105], ["content", "xczxvsdv S"], ["created_at", "2019-07-02 10:36:51.618292"], ["updated_at", "2019-07-02 10:36:51.618292"]]
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:9
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 22ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:51 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (5.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.6ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (23.0ms)
+  Rendered microposts/index.html.erb within layouts/application (30.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/microposts/215" for ::1 at 2019-07-02 17:36:53 +0700
+Processing by MicropostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CqFB+sC/NUCDS/y9GBfegHmjWFkuqyzsVQt/GL8wq+i1SIdsYusGGfQiNf9xlArZgrkYJv8ZlnwtVjjqn13vTA==", "id"=>"215"}
+  [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."id" = ? LIMIT ?[0m  [["id", 215], ["LIMIT", 1]]
+  ↳ app/controllers/microposts_controller.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[36mMicropost Destroy (0.4ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 215]]
+  ↳ app/controllers/microposts_controller.rb:19
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/microposts_controller.rb:19
+Redirected to http://localhost:3000/microposts
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/microposts" for ::1 at 2019-07-02 17:36:53 +0700
+Processing by MicropostsController#index as HTML
+  Rendering microposts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:14
+  Rendered microposts/_form.html.erb (2.7ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:4
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" ORDER BY "microposts"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 15], ["OFFSET", 0]]
+  ↳ app/views/microposts/_list.html.erb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/views/microposts/_list.html.erb:10
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "microposts"[0m
+  ↳ app/views/microposts/_list.html.erb:21
+  Rendered microposts/_list.html.erb (21.0ms)
+  Rendered microposts/index.html.erb within layouts/application (24.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.8ms)
+
+

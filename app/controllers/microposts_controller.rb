@@ -13,4 +13,11 @@ class MicropostsController < ApplicationController
     end
     redirect_to action: :index
   end
+
+  def destroy
+    @micropost = Micropost.find(params[:id])
+    @micropost.destroy
+    flash[:success] = "Post deleted!"
+    redirect_to action: :index
+  end
 end
