@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :users
   resources :microposts
+  resources :relationships, only: [:create, :destroy]
   get "/posts", to: "posts#index"
   root 'static_pages#home'
   # get  "/users", to: "users#index"
